@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6</title>
+<body>
+<h2>Task 4</h2>
+<p id="demo"></p>
+<script>
+
+var numOne, numTwo, res, temp;
+function fun()
+{
+  numOne = parseInt(document.getElementById("one").value);
+  numTwo = parseInt(document.getElementById("two").value);
+  if(numOne && numTwo)
+  {
+    temp = document.getElementById("res");
+    temp.style.display = "block";
+    res = numOne + numTwo;
+    document.getElementById("add").value = res;
+    res = numOne - numTwo;
+    document.getElementById("subtract").value = res;
+    res = numOne * numTwo;
+    document.getElementById("multiply").value = res;
+    res = numOne / numTwo;
+    document.getElementById("divide").value = res;
+  }
+
+}
+function myFunction() {
+  alert("JS Alert");
+}
+var a, b, c, d, e, result, tempp;
+function three(){
+    a = parseInt(document.getElementById("a").value);
+    b = parseInt(document.getElementById("b").value);
+    c = parseInt(document.getElementById("c").value);
+    d = parseInt(document.getElementById("d").value);
+    e = parseInt(document.getElementById("e").value);
+
+    if(a && b && c && d && e)
+    {
+    tempp = document.getElementById("result");
+    tempp.style.display = "block";
+    result = Math.min(a, b, c, d, e);
+    document.getElementById("min").value = result;
+    result = Math.max(a, b, c, d, e) ;
+    document.getElementById("max").value = result;
+    const random = [a, b, c, d, e];
+    var index = Math.floor (Math.random() * random.length);
+    result = random[index];
+    document.getElementById("random").value = result;
+   
+    }
+
+}
+
+let text1 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            let text2 = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            let result2 = text2.bold();
+            result2 = result2.fontsize(4);
+            let text3 = "has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially"
+            let text4 = "UNCHANGED."
+            let result4 = text4.bold();
+            result4 = result4.big();
+            let text5 = "It was popularised in the"
+            let text6 = "1960s"
+            let result6 = text6.bold();
+            result6 = result6.fontsize(4);
+            let text7 = "with the release of"
+            let text8 = "LETRASET"
+            let result8 = text8.bold();
+            result8 = result8.big();
+            let text9 = "sheets containing Lorem Ipsum passages, and"
+            let text10 = "more recently with desktop"
+            let result10 = text10.strike();
+            let text11 = "publishing software like Aldus"
+            let text12 = "PageMaker"
+            let result12 = text12.link("https://www.google.com/");
+            let text13 = "including versions of"
+            let text14 = "Lorem Ipsum."
+            let result14 = text14.big();
+            result14 = result14.italics();
+
+            document.getElementById("demo").innerHTML = 
+            text1 + " " + result2 + " " + text3 + " " + result4 + " " + text5 
+            + " " + result6 + " " + text7 + " " + result8 + " " + text9 + " " + result10
+            + " " + text11 + " " + result12 + " " + text13 + " " + result14; 
+</script>
+</body>
+</head>
+<body>
+    
+    <b>
+    <h2>TASK 1</h2>
+    <p>JavaScript Calculator</p>
+    <p id="input">a: <input id="one">
+        <br/><br/>
+        b: <input id="two"></p>
+        <p><button onclick="fun()">Calculate</button></p>
+        <p id="res" style="display:none;">
+        Sum = <input id="add"><br/><br/>
+        Subtraction = <input id="subtract"><br/><br/>
+        Product = <input id="multiply"><br/><br/>
+        Division = <input id="divide"></p>
+
+
+    <h2>TASK 2</h2>
+    <button onclick="myFunction()">Click here to show confirm alert</button>
+
+
+    <h2>TASK 3</h2>
+    <p>Min and Max</p>
+    <p id="input">a: <input id="a">
+        <br/><br/>
+        b: <input id="b">
+        <br/><br/>
+        c: <input id="c">
+        <br/><br/>
+        d: <input id="d">
+        <br/><br/>
+        e: <input id="e">
+    </p>
+    <p><button onclick="three()">Generate</button></p>
+    <p id="result" style="display:none;">
+    Min = <input id="min"><br/><br/>
+    Max = <input id="max"><br/><br/>
+    Random = <input id="random"></p>
+    </b>
+    
+    
+</body>
+</html>
